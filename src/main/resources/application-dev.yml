@@ -1,0 +1,44 @@
+
+server:
+  port: 2090
+spring:
+  profiles:
+    include:
+    - api
+    - field
+    - messages
+
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+      base-path: /manage
+  server:
+    port: 1063
+  endpoint:
+    health:
+      enabled: true
+      show-details: always
+    metrics:
+      enabled: true
+  info:
+    defaults:
+      enabled: true
+  metrics:
+    export:
+      dynatrace:
+        num-threads:
+
+
+thread:
+  pool-core-pool-size: 1
+  pool-max-pool-size: 1
+  pool-queue-capacity: 300
+
+telegram:
+  telegram.bot.token: 1075721427:AAFERSS8-DXaCOfmFTBKZO5MKiBSiJye75E
+  telegram.bot.username: testFarid_Bot
+
